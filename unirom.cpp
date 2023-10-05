@@ -49,7 +49,7 @@ static const unsigned int rom_offsets[] =
 	{
 		// chksum   table 1     table 2     box via ID
 		0x368cadfe, 0x000032c0, 0x00000000, 18, 32, 60, /* IIci */
-		0x36b7fb6c, 0x000032c4, 0x00000000, 18, 32, 60, /* IIsi */
+		0x36b7fb6c, 0x000032c8, 0x00000000, 18, 32, 60, /* IIsi */
 		0x4147dd77, 0x000032c0, 0x00000000, 18, 32, 60, /* IIfx */
 		0x4957eb49, 0x000032cc, 0x00000000, 18, 32, 60, /* IIvx */
 		0x350eacf0, 0x000032cc, 0x00000000, 18, 32, 60, /* LC */
