@@ -56,6 +56,7 @@ static const unsigned int rom_offsets[] =
 		0x35c28f5f, 0x000032b4, 0x00000000, 18, 32, 60, /* LC II */
 		0xecd99dc0, 0x0000322c, 0x00000000, 18, 32, 60, /* Color Classic */
 		0xecfa989b, 0x00003200, 0x000d1540, 18, 32, 60, /* PowerBook Duo 210/230/250 */
+		0xec904829, 0x00003220, 0x000d2780, 18, 32, 60, /* LC III */
 		0xecbbc41c, 0x00003220, 0x000d2780, 18, 32, 60, /* LC III */
 		0xede66cbd, 0x00003224, 0x000d1e70, 18, 32, 60, /* LC 520/550 and friends */
 		0xfda22562, 0x0000325c, 0x000a79c0, 18, 32, 60, /* PowerBook 150 */
