@@ -60,7 +60,7 @@ static const unsigned int rom_offsets[] =
 		0xecbbc41c, 0x00003220, 0x000d2780, 18, 32, 60, /* LC III */
 		0xede66cbd, 0x00003224, 0x000d1e70, 18, 32, 60, /* LC 520/550 and friends */
 		0xfda22562, 0x0000325c, 0x000a79c0, 18, 32, 60, /* PowerBook 150 */
-		0xeaf1678d, 0x00003230, 0x000d0670, 18, 32, 60, /* Macintosh TV / LC 550 */
+		0xeaf1678d, 0x00003230, 0x000d0670, 18, 32, 60, /* Macintosh TV */
 		0x420dbff3, 0x000031c8, 0x00000000, 18, 32, 60, /* Quadra 700/900, PowerBook 140/170 */
 		0xe33b2724, 0x00003218, 0x00000000, 18, 32, 60, /* PowerBook 160/165/165c/180/180c */
 		0xf1a6f343, 0x00003230, 0x000d2800, 18, 32, 60, /* Quadra 800 and friends (earlier) */
@@ -82,11 +82,13 @@ static const unsigned int rom_offsets[] =
 		0x852cfbdf, 0x0003ea70, 0x0003ea8c, 18, 48, 88, /* PowerBook 5300 */
 		0x2bef21b7, 0x00013b20, 0x00013b28, 18, 48, 88, /* Pippin v1.0 */
 		0x575be6bb, 0x00012b30, 0x00012b58, 18, 48, 88, /* Motorola StarMax 3000/4000/5500, Umax C500/600 */
+		0x6e92fe08, 0x000192e0, 0x0001932c, 18, 48, 88, /* PowerMac 6500 and Twentieth Anniversary Mac */
 		0x960e4be9, 0x00018840, 0x00018858, 18, 48, 88, /* PowerMac 7300/7600/8600/9600 */
 		0x276ec1f1, 0x00013b50, 0x00013b5c, 18, 48, 88, /* PowerBook 2400/3400 */
 		0x79d68d63, 0x00012d00, 0x00012d08, 18, 48, 88, /* PowerMac G3 "Beige" */
 		0x78f57389, 0x00012d10, 0x00000000, 18, 48, 88, /* PowerMac G3 "Beige" */
 		0xb46ffb63, 0x00014390, 0x00014398, 18, 48, 88, /* PowerBook G3 "WallStreet" */
+		0x2560f229, 0x00013bf0, 0x00000000, 18, 48, 88, /* PowerBook G3 "Kanga" */
 
 		0xffffffff, 0xffffffff, 0xffffffff, 0, /* terminate list */
 };
@@ -190,7 +192,7 @@ void parse_table(unsigned int tblOffs, unsigned int boxOffs, unsigned int viaOff
 			const unsigned int screenPhysBase = read32();
 			const unsigned int screen32Base = read32();
 			const unsigned int screen24Base = read32();
-			printf("\tScreen physical %08x logical 32-bit %08x logical 24-bit %08x\n", screenPhysBase, screen32Base, screen24Base);
+			printf("\t[decoder @ %08x] Screen physical %08x logical 32-bit %08x logical 24-bit %08x\n", infoPtr + decoderOffs - 4, screenPhysBase, screen32Base, screen24Base);
 
 			seek32(infoPtr + decoderOffs - 4);
 			const unsigned int ROMLoc = read32();
