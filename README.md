@@ -1,5 +1,5 @@
 # unirom
-A command line utility that dumps Universal table info from many Old World Mac ROMs.  Known to work on at least Linux and Intel macOS.
+A command line utility that dumps Universal table info from many Old World Mac ROMs.  Known to work on at least Linux and macOS (both Intel and ARM).
 
 This is extremely gross code.  It was cobbled together over a long period of time to fulfill a purpose.  It works for that, but it's certainly imperfect and has bugs.
 
